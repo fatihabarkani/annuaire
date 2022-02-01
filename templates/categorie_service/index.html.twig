@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les Catégories de service{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+    {# <div class="container"> #}
+        <h1>Les catégories de service</h1>
+        {{ render(path('recherche'))}}
+        {% for categorieService in categorieServices %}
+        <section>
+            <a href='{{ path('cat_detail', {id: categorieService.Id}) }}'><h4>{{ categorieService.nom() }}</h4></a>
+            <p>{{categorieService.description}}</p>
+        </section>
+        {% endfor %}
+    {# </div> #}
+</div>
+{% endblock %}

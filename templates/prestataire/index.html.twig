@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les prestataires{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+    {# <div class="container"> #}
+        <div class="grid">
+            <h1>Les prestataires</h1>
+            {{ render(path('recherche'))}}
+            <!--pour chaque prestataire, afficher son nom avec le lien vers le detail-->
+            {% for prestataire in prestataires %}
+            <section>
+                <a href='{{ path('prest_detail', {id: prestataire.Id}) }}'><h3>{{ prestataire.nom() }}</h3></a>
+                {% for image in prestataire.images %}
+                <img class="img-prest" src="{{ asset('/uploads/'~image.image) }}" alt="photo_prestataire">
+                {% endfor %}
+            </section>
+            {% endfor %}
+        </div>
+        {# affichage de la pagination #}
+        <div class="pagination">
+        {{ knp_pagination_render(prestataires) }}
+        </div>
+    {# </div> #}
+
+</div>
+
+{% endblock %}

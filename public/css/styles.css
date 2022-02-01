@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@700&family=Inter:wght@100;200;300;400;500&display=swap');
+
+*{
+    
+    font-family: 'Inter', sans-serif;
+    
+}
+
+body{
+    background-color: rgb(230, 248, 248);
+}
+
+.wrapper {
+   
+    width:100%; 
+    max-width: 90%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    
+}
+
+/*Mise en avant d'un service de catégorie*/
+.container-cat-mois{
+    border-style: double;
+    color: red;
+    padding-bottom: 10px; 
+}
+
+
+/* bloc recherche */
+.search-prest{
+    text-align: center;
+    background-color: rgb(205, 230, 229);
+    width: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*formulaire recherche*/
+.form-control rounded{
+    width: 50px;
+}
+
+.search-prest{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.search{
+    background-color: rgb(205, 230, 229);
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+
+.search-prest>button{
+    height: 40px;
+    margin-top: 10px;
+}
+
+.search-area > input{
+    height: 40px;
+    padding-top: 10px;
+    margin: 10px 10px 10px 10px;
+
+}
+
+/*Les titres */
+
+h1{
+    color: rgb(112, 153, 167);
+    text-align: center;
+    font-weight: 400;
+    border-style: double;
+    margin-left: 40px;
+    margin-right: 40px;
+      
+}
+
+
+h2{
+    color: rgb(120, 161, 175);
+    text-align: center;
+    font-weight: 350;
+    border-style: double;
+   
+}
+
+h3{
+    text-align: center;
+    font-weight: 550;
+}
+
+
+/*les sections*/
+section{
+    text-align: center;
+    
+}
+
+/*container de categories de service*/
+.categories-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: rgb(205, 230, 229);
+}
+
+
+/*container de prestataires*/
+.prestataires-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: rgb(205, 230, 229);
+    padding-bottom: 20px;
+}
+
+
+
+/* image prestataires page d'accueil*/
+.img-prest{
+    width: 200px;
+    height: 150px;
+}
+
+/*image cat service*/
+.img-cat{
+    width: 120px;
+    height: 80px;
+}
+
+/* image prestataire */
+.img-prestataires{
+    width: 300px ;
+}
+
+/* prestataires */
+.nom_prestataire{
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+
+.site_prestataire{
+    font-size: 15px !important;
+    font-weight: 200;
+}
+
+.container{
+    text-align: center;
+} 
+
+.apropos{
+    text-align: center;
+    
+}
+
+/*prestataires*/
+
+.prest_list{
+    text-align: center;
+}
+
+.detail{
+    text-align: center;
+}
+
+.text-dark{
+    color: black;
+}
+
+/*pagination*/
+
+.pagination{
+    display: inline-block;
+}
+
+.pagination a {
+color: black;
+padding: 8px 16px;
+text-decoration: none;
+
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+
+}
+
+/* slider carousel page d'accueil*/
+#carouselExampleControls{
+    width: 50%;
+    margin: 0 auto;
+    
+}
+
+.carousel-item img{ 
+    height: 300px;
+    margin-top: 0;
+
+}
+/*les cards categorie de service*/
+.link-prestataires{
+    text-align: center;
+
+}
+
+/*card promo du mois*/
+
+.card-body{
+    background-color: rgb(228, 237, 247);
+}
+
+/*les cards prestataires*/
+.card-img-top{
+    
+    height: 250px;
+    width: 250px;
+
+}
+
+.link-categories{
+    text-align: center;
+}
+
+/*checkbox newsletter*/
+.form-check-input {
+    position: absolute;
+    opacity: 0;
+}
+
+.form-check-input + label::before,
+input[type=checkbox] + label::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+}
+
+.form-check-input + label::before {
+    left: 0.5rem;
+    top: 0.15rem;
+    width: 0.9rem;
+    height: 0.9rem;
+    border: 0.05rem solid black;
+    background: white;
+  }
+
+.form-check-input + label::after {
+    left: 0.6rem;
+    top: 0.28rem;
+    height: 0.8rem;
+  }
+  
+.form-check-input:focus + label::before {
+    
+    outline: 0.1rem solid;
+    background-color: rgb(145, 209, 218);
+  }
+
+/* footer */
+footer {
+    
+    width: 100%;
+    background-color:rgb(96, 186, 228);
+    color: rgb(7, 6, 6);
+    text-align: center;
+  }
+
+ 

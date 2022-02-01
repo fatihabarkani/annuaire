@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}A propos{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+    <div class='apropos'>
+    <h1>A propos de nous...</h1>
+        {{ render(path('recherche'))}}
+    <br>
+    <p>Le mal de dos est parfois handicapant, inquiétant, frustrant. Avoir mal au dos, c’est aussi sacrifier plusieurs activités de loisirs et sportives. On se demande si notre lombalgie affectera notre indépendance dans le futur. La crainte de la douleur chronique nous guette constamment. Et si ma condition s’aggravait? Et s’il fallait me faire infiltrer, ou pire encore, opérer? Et si je devais arrêter mon sport favori pour toujours? Et si, et si….Tant que questions vous tracassent l’esprit!</p><br>
+    <p>Je m’appelle Anas Boukas et je suis physiothérapeute (kiné pour les Français). Des gens qui ont mal au dos, je ne vois que ça au quotidien. Le problème, c’est que les patients consultent seulement lorsque la douleur devient intolérable, et limite les activités quotidiennes. Souvent, c’est parce qu’ils n’ont pas ce qu’il fallait pour éviter l’aggravation de leur condition. Mais pourquoi donc?</p><br>
+    <p>“J’ai essayé de consulter sur Internet, mais je n’ai rien compris aux sites médicaux!”</p><br>
+    <p>“J’ai essayé des exercices trouvés sur Youtube, mais j’ai constaté qu’ils n’étaient pas adaptés à ma situation.”</p><br>
+    <p>“Les sites consultés ne faisaient que vendre des appareils et gadgets supposés guérir mon mal de dos instantanément!”</p><br>
+    <p>“J’ai consulté certains forums, mais j’ai tellement eu peur de ce que j’ai vu que j’ai préféré ne rien faire!”</p>
+    </div>
+</div>
+{% endblock %}

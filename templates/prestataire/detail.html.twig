@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Detail prestataire{% endblock %}
+
+
+{% block body %}
+<div class="wrapper">
+    <div class="detail">
+        <h1>La fiche prestataire</h1>
+        <h3> {{prestataire.nom}}</h3>
+        <p>Site web: {{prestataire.siteInternet}}</p>
+        <p>Numéro de Tel: {{prestataire.numTel}} </p>
+        <p>Numéro de TVA: {{prestataire.numTva}} </p>
+        {% for image in prestataire.images %}
+            <img class="img-prest" src="{{ asset('/uploads/'~image.image) }}" alt="photo_prestataire">
+        {% endfor %}
+        <h2>Toutes les catégories de services liées à ce prestataire</h2>
+        {% for cat in categorieServices %}
+        <div class="prest-cat">
+            <a href="{{ path('cat_detail', {id: cat.id})}}"><h4>{{ cat.nom() }}</h4></a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

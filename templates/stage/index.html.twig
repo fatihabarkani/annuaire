@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les stages{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+    <h1>Les stages</h1>
+        {{ render(path('recherche'))}}
+    <h2>Voici les stages qui vous sont proposés</h2>
+</div>
+{% endblock %}
+

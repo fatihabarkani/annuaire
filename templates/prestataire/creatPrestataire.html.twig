@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Prestataire{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+    <h1>Formulaire de confirmation</h1>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-12">
+                <div class="form-group">
+                {{ form_start(prestForm) }}
+                </div>
+                <div class="form-group">
+                    {{form_row(prestForm.nom, {'attr': {'class':'form-control'}}) }}
+                </div>
+                <div class="form-group">
+                    {{form_row(prestForm.siteInternet, {'attr': {'class':'form-control'}}) }}
+                    {{form_row(prestForm.numTel, {'attr': {'class':'form-control'}}) }}
+                    {{form_row(prestForm.numTva, {'attr': {'class':'form-control'}}) }} 
+                        {% for child in prestForm.categorieServices.children %}
+                        <p><label for="{{ child.vars.id }}">{{ form_widget(child) }} {#{{ child.vars.label }}#}</label></p>
+                        {% endfor %} 
+                </div>
+                    {{ form_end(prestForm) }}
+            </div>
+            <div class"col"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,56 @@
+<div class="wrapper">
+    <section class="search" id="search"> 
+        <section class="search-form">
+            <form action="{{ path('prest_recherche') }}" method="post" class="search-form-input">
+                <div class="search-prest">                
+                    <div class="search-area">
+                        <input type="text" name="nom" list="nom" placeholder="Nom"/>  
+                        <datalist id="nom">
+                            {# ajout des noms de prestataires#}
+                            {% for nom in noms %}
+                            <option>{{ nom.nom }}</option>                        
+                            {% endfor %} 
+                        </datalist>                
+                    </div>                
+                    <div class="search-area">
+                        <input type="text" name="cp" list="cp" placeholder="Code postal"/>
+                        <datalist id="cp">
+                            {# ajout des toutes les codes Postal#}
+                            {% for cp in cps %}
+                            <option>{{ cp.codePostal }}</option>                        
+                            {% endfor %} 
+                        </datalist>
+                    </div>                
+                    <div class="search-area">
+                        <input type="text" name="commune" list="commune" placeholder="Commune"/>
+                        <datalist id="commune">
+                            {# ajout des communes#}
+                            {% for commune in communes %}
+                            <option>{{ commune.commune }}</option>                        
+                            {% endfor %} 
+                        </datalist>
+                    </div>
+                    <div class="search-area">
+                        <input type="text" name="localite" list="localite" placeholder="Localité"/>
+                        <datalist id="localite">
+                            {# ajout des toutes les localites#}
+                            {% for localite in localites %}
+                            <option>{{ localite.localite }}</option>                        
+                            {% endfor %} 
+                        </datalist>
+                    </div>
+                    <div class="search-area">
+                        <input type="text" name="service" list="service" placeholder="Catégorie de Service"/>
+                        <datalist id="service">
+                            {# ajout des toutes les services#}
+                            {% for categorieService in categorieServices %}
+                            <option>{{ categorieService.nom }}</option>                        
+                            {% endfor %} 
+                        </datalist>
+                    </div>
+                    <button type="submit" class="submit-btn prest">Recherche</button>
+                </div>
+            </form>
+        </section>
+    </section>
+</div>

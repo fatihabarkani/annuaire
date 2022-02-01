@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Internaute{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+    <h1>Formulaire de confirmation</h1>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-12">
+            <div class="form-group">
+                {{ form_start(internForm) }}
+            </div>
+            <div class="form-group">
+                {{form_row(internForm.nom, {'attr': {'class':'form-control'}}) }}
+            </div>
+            <div class="form-group">
+                {{form_row(internForm.prenom, {'attr': {'class':'form-control'}}) }}
+                {% for child in internForm.newsletter.children %}
+                <p><label for="{{ child.vars.id }}">{{ form_widget(child) }} {#{{ child.vars.label }}#}</label></p>
+                {% endfor %} 
+            </div>
+                {{ form_end(internForm) }}
+            </div>
+        <div class"col"></div>
+    </div>       
+ </div>
+{% endblock %}
