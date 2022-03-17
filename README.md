@@ -8,11 +8,14 @@ Projet web dynamique: Annuaire
 
 https://github.com/fatihabarkani/annuaire
 
-1. installer composer
+1. installer composer ->avec la commande "compose install".
+2. exécuter les migrations qui se trouvent dans le folder "migrations".
 
 #accès
 
-accéder au site via le localhost
+- accéder au site via le localhost https://127.0.0.1:8000/
+
+- pour l'interface admin: https://127.0.0.1:8000/admin
 
 #outils utilisés
 
