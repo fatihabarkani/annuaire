@@ -16,8 +16,9 @@ accéder au site via le localhost
 
 #outils utilisés
 
--symfony version 
--PHPMyAdmin
--PHP
+-Server Software : Apache/2.4.46 (Win64) 
+-Symfony version 5
+-PHP/7.3.21
+-Version de MySQL : 5.7.31
 
 
