@@ -24,4 +24,6 @@ https://github.com/fatihabarkani/annuaire
 -PHP/7.3.21
 -Version de MySQL : 5.7.31
 
+Pour l'envoi d'email, ne pas oublié de modifier le fichier .env:
 
+le mailer DNS ->symfony/mailer 
